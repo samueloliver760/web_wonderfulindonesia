@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Tourist Destination</title>
+	<link rel="icon" href="logo.png">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.flip.js"></script>
+
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-family: 'QuickSand';
+		}
+
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.wrapper {
+			width: 1200px;
+			margin: auto;
+			position: relative;
+			margin-bottom: 40px;
+			margin-top: 20px;
+		}
+
+		.logo img {
+			width: 80px;
+			height: 80px;
+			float: left;
+			padding: 10px
+		}
+
+		.title {
+			font-size: 30px;
+			font-weight: 800;
+			font-family: Pacifico;
+			color: navy;
+			float: left;
+			margin: 10px;
+			padding: 5px;
+		}
+
+		.menu {
+			float: right;
+			margin: 20px;
+		}
+
+		nav {
+			width: 100%;
+			margin: auto;
+			line-height: 60px;
+			position: sticky;
+			padding: 2px;
+			background-color: transparent;
+			position: fixed;
+			z-index: 1;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			font-size: 20px;
+
+		}
+
+		nav ul li {
+			float: left;
+		}
+
+		a.tbl:hover {
+			color: green;
+			font-weight: 900x;
+			border-bottom: 4px solid red;
+		}
+
+		nav ul li a {
+			color: navy;
+			font-weight: bold;
+			padding: 10px 20px;
+			text-decoration: none;
+			margin-top: 10px;
+			width: 400px;
+		}
+
+		.active_nav {
+			background-color: rgb(255, 255, 255);
+			top: 0;
+			left: 0;
+			right: 0;
+			border-bottom: 3px solid black;
+		}
+
+		.cover_header img {
+			position: absolute;
+			height: 700px;
+			width: 100%;
+			background-size: cover;
+		}
+
+		.caption {
+			position: relative;
+			overflow: hidden;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			font-size: 60px;
+			font-family: Permanent Marker;
+			color: black;
+		}
+
+		.header {
+			width: 100%;
+			height: 700px;
+		}
+
+		h1 {
+			font-family: 35px;
+			text-align: center;
+			font-weight: 800;
+			margin: 30px;
+		}
+
+		h2 {
+			text-align: center;
+			font-size: 20px;
+			width: 250px;
+			margin: 20px;
+			padding: 20px;
+
+		}
+
+		.text {
+			font-size: 20px;
+			text-align: justify;
+			padding: 20px;
+		}
+
+
+		mark {
+			background-color: transparent;
+			font-family: Permanent Marker;
+		}
+
+		.footer {
+			background-color: lightblue;
+			margin-top: 10px;
+		}
+
+		.social-link .sm {
+			display: inline-block;
+			height: 30px;
+			width: 30px;
+			margin: 0 10px 10px 0;
+		}
+
+		.social-link .sma {
+			display: inline-block;
+			height: 30px;
+			width: 40px;
+			margin: 0 10px 10px 0;
+		}
+
+		.footer-col {
+			width: 20%;
+			padding: 20px 20px;
+			margin: 50px;
+		}
+
+		.container {
+			max-width: 1170px;
+			margin: auto;
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+
+		.footer-col h3 {
+			font-size: 25px;
+			margin-bottom: 10px;
+			line-height: 30px;
+			height: 100px;
+		}
+
+		.footer-col p ul li {
+			font-size: 20px;
+		}
+
+		.copyright {
+			text-decoration: none;
+			text-align: center;
+			background-color: black;
+			color: white;
+			font-size: 20px;
+			padding: 5px;
+		}
+
+		.hotspot {
+			width: 20px;
+			height: 20px;
+			background-color: lightgreen;
+			border-radius: 50%;
+			position: absolute;
+		}
+
+		.one {
+			left: 7%;
+			bottom: 68%;
+		}
+
+		.two {
+			left: 25%;
+			bottom: 45%;
+		}
+
+		.three {
+			left: 57%;
+			bottom: 32%;
+		}
+
+		.four {
+			left: 53%;
+			bottom: 58%;
+		}
+
+		.five {
+			left: 40%;
+			bottom: 19%;
+		}
+
+		.six {
+			left: 32%;
+			bottom: 26%;
+		}
+
+		.seven {
+			left: 70%;
+			bottom: 53%;
+		}
+
+		.eight {
+			left: 45%;
+			bottom: 22%;
+		}
+
+		.nine {
+			left: 35%;
+			bottom: 25%;
+		}
+
+		.ten {
+			left: 19%;
+			bottom: 36%;
+		}
+
+		.eleven {
+			left: 41%;
+			bottom: 58%;
+		}
+
+		.twelve {
+			left: 48%;
+			bottom: 65%;
+		}
+
+		.thirdteen {
+			left: 90%;
+			bottom: 43%;
+		}
+
+		.fourteen {
+			left: 66%;
+			bottom: 42%;
+		}
+
+		.fiveteen {
+			left: 32%;
+			bottom: 56%;
+		}
+
+		@keyframes wave {
+			from {
+				box-shadow: 0 0 0 0 #9acd32bb;
+			}
+
+			to {
+				box-shadow: 0 0 0 10px #9acd32bb;
+			}
+
+
+		}
+
+		.hotspot::before {
+			content: attr(text);
+			width: max-content;
+			position: absolute;
+			background-color: black;
+			color: white;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 30px;
+			padding: 8px 20px;
+			font-size: 14px;
+			border-radius: 3px;
+			display: none;
+		}
+
+		.hotspot::after {
+			content: "";
+			border-color: transparent transparent #222222dd;
+			border-width: 0 8px 6px;
+			border-style: solid;
+			position: absolute;
+			top: 24px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: none;
+		}
+
+		.hotspot:hover::before,
+		.hotspot:hover::after {
+			display: block;
+		}
+
+		.bagian_provinsi {
+			height: 500px;
+		}
+
+		.info_tw {
+			padding: 10px;
+			width: 1100px;
+			height: 650px;
+			margin: 40px;
+			border: 2px solid black;
+			text-align: left;
+			font-size: 30px;
+		}
+
+		.danautoba .tanjungkelayang .wakatobi .cinta_island .gwk .borubudur .raja_ampat .labuan_bajo .mount_bromo .sharksteeth_beach .mahakam_river .derawan_islands .sentani_lake .gong_peace .lake_kapuas {
+			height: 500px;
+			padding: 20px;
+			margin: 20px;
+		}
+
+		.danautoba img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 20px;
+			padding: 20px;
+		}
+
+		.tanjungkelayang img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 20px;
+			padding: 20px;
+		}
+
+		.wakatobi img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.cinta_island img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.gwk img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.borubudur img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.raja_ampat img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.labuan_bajo img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.mount_bromo img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.sharksteeth_beach img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.mahakam_river img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.derawan_islands img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.sentani_lake img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.gong_peace img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.lake_kapuas img {
+			width: 360px;
+			height: 300px;
+			float: left;
+			margin: 25px;
+			padding: 20px;
+		}
+
+		.danautoba h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.tanjungkelayang h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.wakatobi h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.cinta_island h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.gwk h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.borubudur h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.raja_ampat h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.labuan_bajo h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.mount_bromo h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.sharksteeth_beach h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.mahakam_river h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.derawan_islands h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.sentani_lake h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.gong_peace h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.lake_kapuas h2 {
+			font-size: 40px;
+			width: 1020px;
+			margin: 20px;
+			padding: 20px;
+			height: 80px;
+			text-align: center;
+		}
+
+		.detail {
+			float: right;
+			width: 530px;
+			margin: 35px;
+			padding: 20px;
+			font-size: 27px;
+			text-align: justify;
+		}
+
+		.tulisan_currency {
+			font-size: 20px;
+			padding: 20px;
+			margin: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<nav>
+			<div class="wrapper">
+				<div class="logo"><img src="logo.png"></div>
+				<div class="title">Visit Indonesia</div>
+				<div class="menu">
+					<ul>
+						<li><a href="Visit Indonesia - Home Page.html" class="tbl">Home</a></li>
+						<li><a href="Visit Indonesia - Indonesia.html" class="tbl">About Indonesia</a></li>
+						<li><a href="Visit Indonesia - Tempat Wisata.html" class="tbl">Tourism
+								Destination</a></li>
+								<li><a href="Visit Indonesia - Login.php" class="tbl">Apply E-visa</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+
+		<div class="cover_header">
+			<img src="cover1.jpg" />
+		</div>
+
+		<div class="caption"><mark class="ubah_warna">Tourist</mark><mark class="ubah_warnatwo"> Destination</mark>
+		</div>
+	</div>
+
+	<div class="wilaysh">
+		<div class="wrapper">
+			<div class="tulisan_currency">
+				<p class="uang">These are some recommedation place that you must visit when arrive
+					to Indonesia !</p>
+
+			</div>
+			<div class="bagian_provinsi">
+				<img src="petaindo.png" />
+				<div class="hotspot one" text="Lake Toba"></div>
+				<div class="hotspot two" text="Cape Kelayang"></div>
+				<div class="hotspot three" text="Wakatobi Nation Park"></div>
+				<div class="hotspot four" text="Cinta Islands"></div>
+				<div class="hotspot five" text="Garuda Wisnu Kencana Statue"></div>
+				<div class="hotspot six" text="Borubudur Temple"></div>
+				<div class="hotspot seven" text="Raja Ampat"></div>
+				<div class="hotspot eight" text="Labuan Bajo"></div>
+				<div class="hotspot nine" text="Mount Bromo"></div>
+				<div class="hotspot ten" text="Sharks Teeth Beach"></div>
+				<div class="hotspot eleven" text="Mahakam River"></div>
+				<div class="hotspot twelve" text="Derawan Islands"></div>
+				<div class="hotspot thirdteen" text="Lake Sentani"></div>
+				<div class="hotspot fourteen" text="World Peace Gong"></div>
+				<div class="hotspot fiveteen" text="Lake Kapuas"></div>
+
+			</div>
+		</div>
+
+	</div>
+	</div>
+
+	<div class="wilaysh">
+		<div class="wrapper">
+			<div class="info_tw">
+				<p class="provinsi"></p>
+			</div>
+
+			<div class="danautoba" hidden>
+				<h2>Danau Toba</h2>
+				<img src="wisata1.jpg" />
+				<div class="detail">
+					<p>Lake toba is a large natural lake in North Sumatra, Indonesia.
+						The lake is located in the middle of the northern part of the islands
+						of Sumatera. The lake is about 100 km long, 30 km wide and up to 505 m deep.
+						It's the largest lake in Indonesia and the largest volcanic lake in the world</p>
+				</div>
+			</div>
+
+			<div class="tanjungkelayang" hidden>
+				<h2>Cape Kelayang</h2>
+				<img src="wisata2.jpg" />
+				<div class="detail">
+					<p>Cape Kelayang is located in the middle of Tanjung Kelayang Beach. It's the rock that
+						rocks that form a unique shape simillar to a head of a bird. The locals call it Batu
+						Garuda
+						and became one of the best landmarks in Belitung islands.</p>
+				</div>
+			</div>
+
+			<div class="wakatobi" hidden>
+				<h2>Wakatobi Nation Park</h2>
+				<img src="wisata3.jpg" />
+				<div class="detail">
+					<p>Wakatobi Nation Park is a marine national park located in Southeast Sulawesi.
+						Wakatobi itself is the combination of the name of four main islands (<b>Wa</b>ngi-
+						<b>Ka</b>ledupa-<b>To</b>mia-<b>Bi</b>nongko).Since 2005, the park is listed as a
+						tentative World Heritage Site
+					</p>
+				</div>
+			</div>
+
+			<div class="cinta_island" hidden>
+				<h2>Cinta Islands</h2>
+				<img src="wisata4.jpg" />
+				<div class="detail">
+					<p>Cinta Islands is located in the coast of Tomini Gult in Gorontalo. Cinta Islands
+						literally
+						means the island of loves. If look from above or drone, the islands forms the shape
+						of a heart
+						as id Mother Nature sculpted the universal symbol of love. Cinta islands is located
+						among the 23
+						inhabited islands at Tomini Bay.</p>
+				</div>
+			</div>
+
+			<div class="gwk" hidden>
+				<h2>Garuda Wisnu Kencana</h2>
+				<img src="wisata5.jpg" />
+				<div class="detail">
+					<p>Garuda Wisnu Kencana is a tourist destination and attraction located at Badung, Bali.
+						It's devoted to the Hindu god Vishnu, and his mount, Garuda, the mythical bird who
+						became
+						his companion. The statue is 120,9 m tall and completed in Augusts 2018.</p>
+				</div>
+			</div>
+
+			<div class="borubudur" hidden>
+				<h2>Borubudur</h2>
+				<img src="wisata6.jpg" />
+				<div class="detail">
+					<p>Borubudur is a Buddhist temple in Magelang, Central Java. It's the world's largest
+						Buddhist
+						temple consists of nine stacked platforms, six squarea nd three circular topped by a
+						central
+						dome. This temple built in the 9<sup>th</sup> century during the reign of Sailendra
+						Dynasty</p>
+					</p>
+				</div>
+			</div>
+
+			<div class="raja_ampat" hidden>
+				<h2>Raja Ampat</h2>
+				<img src="wp.jpg" />
+				<div class="detail">
+					<p>Raja Ampat is located in the most western part of Papua and has the area of 4,6 million
+						hectare. Raja Ampat consits of 4 big
+						islands which are Waigeo, Batenta, Sulaweti and Misol. Beside that, there are still
+						1.847 small islands around the Raja Ampat.
+						Raja Ampat is one of the best diving destination in the world because has 75 % alive
+						coral and many kinds of fishes.</p>
+				</div>
+			</div>
+
+			<div class="labuan_bajo" hidden>
+				<h2>Labuan Bajo</h2>
+				<img src="wisata8.jpg" />
+				<div class="detail">
+					<p>Labuan Bajo is located at the western end of the large islands of FLores in the East
+						Nusa Tenggara. Many people went here to
+						see the Komodo Nation Park, where the Komodo dragon live.
+					</p>
+				</div>
+			</div>
+
+			<div class="mount_bromo" hidden>
+				<h2>Mount Bromo</h2>
+				<img src="wisata9.jpg" />
+				<div class="detail">
+					<p>Mount Bromo is an active somma volcana and part of the Tengger mountains in East Java.
+						With the height of 2.329 m, this mountain is
+						one of the most visited tourist destinations in East Java. From a vantage point on
+						Mount Penanjakan, visitors from around the world come to see
+						the sunrise over Mount Bromo.</p>
+				</div>
+			</div>
+
+			<div class="sharksteeth_beach" hidden>
+				<h2>Sharks Teeth Beach</h2>
+				<img src="wisata10.jpeg" />
+				<div class="detail">
+					<p>Shark Tooth Beach is located in Pegadungan Village, Kelumbayan, Lampung. This braach
+						has a view of towering rock like a row of shark teeth.
+						The location of this beach is far from the city center, that's why it's the Hidden
+						Paradise in Lampung. </p>
+				</div>
+			</div>
+
+			<div class="mahakam_river" hidden>
+				<h2>Mahakam River</h2>
+				<img src="wisata11.jpg" />
+				<div class="detail">
+					<p>Mahakam river is the 3<sup>rd</sup> longest and voluem discharge river in Borneo after
+						Kapuas and Barito rivers. It's located in East Kalimantan.
+						It flows 980 km from the districs of Long Apari in the highlands of Borneo to
+						Makasaar Strait. The capital of East Kalimantan, Samarinda, lies aling
+						48 km from the river mouth</p>
+				</div>
+			</div>
+
+			<div class="derawan_islands" hidden>
+				<h2>Derawan Islands</h2>
+				<img src="wisata12.jpg" />
+				<div class="detail">
+					<p>Derawan Islands are located in the East Kalimantan. It consits of 31 islands, most well
+						known among these are Derawan, Kakaban, Maratua and Sangalaki.
+						There are also numerous submerged reefs and islets. The islands is directly to
+						Sulawesi Sea.
+					</p>
+				</div>
+			</div>
+
+			<div class="sentani_lake" hidden>
+				<h2>Lake Sentani</h2>
+				<img src="wisata13.jpg" />
+				<div class="detail">
+					<p>Lake Sentani is a tropical, shallow, and at low-altitude open lake located at the
+						northeast extermity of Jayapura around 20 km from the Jayapura City.
+						The locals considered this lake as the home of the rainbows, is part of the Cyclops
+						Tricts Nature Reserve and contains several species of fish.
+					</p>
+				</div>
+			</div>
+
+			<div class="gong_peace" hidden>
+				<h2>World Peace Gong</h2>
+				<img src="wisata14.jpg" />
+				<div class="detail">
+					<p>World Peace Gong is located in Ambon. This is the 35<sup>th</sup> World Peace Gong all
+						around the world. In this gong, there are many flags from all
+						the world. Beneath the monument, there is the museum which visitors can see photos
+						that tell stories about Ambon's origin.</p>
+				</div>
+			</div>
+
+			<div class="lake_kapuas" hidden>
+				<h2>Lake Kapuas</h2>
+				<img src="wisata15.jpg" />
+				<div class="detail">
+					<p>Kapuas River is a river in West Kalimantan. This river is 1.143 km in length and the
+						longest river of Indonesia and one of the world's longest island river.
+						The delta of this river is located west-southwest of Pontianak. This river should be
+						distinguished from another Kapuas River in the central Borneo, but flows to
+						the south merging with Barito Rivers and discharging into the Java Sea</p>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	</div>
+
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="footer-col">
+						<h3>Ministry of Tourism and Creative Economy</h3>
+						<p>Jalan Medan Merdeka Barat No 17, RT/RW 02/03, Gambir, Central Jakarta City,
+							Jakarta 10110</p>
+					</div>
+
+					<div class="footer-col">
+						<h3>Services on this Website</h3>
+						<ul>
+							<li>Terms of Service</li>
+							<li>FAQ</li>
+							<li>Privacy Policy</li>
+						</ul>
+					</div>
+
+					<div class="footer-col">
+						<h3>Follow us on this social media !</h3>
+						<div class="social-link">
+							<a href="https://www.instagram.com/pesona.indonesia/"><img class="sm"
+									src="https://icon-library.com/images/instagram-small-icon/instagram-small-icon-12.jpg" /></a>
+							<a href="https://twitter.com/pesonaindonesia"><img img class="sm"
+									src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+							<a href="https://www.youtube.com/c/PesonaIndonesiaofficial"><img img
+									class="sma"
+									src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
+									</a>
+								<a href="https://www.facebook.com/pesona.indonesia"><img img class="sm"
+										src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"></a>
+								<a href="https://www.tiktok.com/@pesonaindonesia"><img img class="sm"
+										src="https://pnggrid.com/wp-content/uploads/2021/04/TikTok-Logo-1363x1536.png"></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+	</footer>
+	<div class="copyright">
+		<div class="wrapper"> <span> &copy;
+				<script>document.write(new Date().getFullYear())
+				</script> | Visit Indonesia. All Rights Reserved.
+			</span> </div>
+	</div>
+
+	<script>
+
+		//Kalau discroll, navigator akan berubah warna//
+		const nav = document.querySelector('nav');
+
+		window.addEventListener('scroll', () => {
+			if (window.scrollY >= 10) {
+				nav.classList.add('active_nav');
+			}
+
+			else {
+				nav.classList.remove('active_nav');
+			}
+
+		})
+
+		$(document).ready(function () {
+			$(".caption").mouseover(function () {
+				$(".ubah_warna").css({ "color": "red" });
+				$(".ubah_warnatwo").css({ "color": "whitesmoke" });
+			})
+
+			$(".caption").mouseout(function () {
+				$(".ubah_warna").css({ "color": "black" });
+				$(".ubah_warnatwo").css({ "color": "black" });
+			})
+		})
+
+
+		$(document).ready(function () {
+			$(".one").mouseover(function () {
+				$(".danautoba").removeAttr('hidden');
+				$(".info_tw").append($(".danautoba"));
+			})
+
+			$(".one").mouseout(function () {
+				$(".danautoba").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".two").mouseover(function () {
+				$(".tanjungkelayang").removeAttr('hidden');
+				$(".info_tw").append($(".tanjungkelayang"));
+			})
+
+			$(".two").mouseout(function () {
+				$(".tanjungkelayang").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".three").mouseover(function () {
+				$(".wakatobi").removeAttr('hidden');
+				$(".info_tw").append($(".wakatobi"));
+			})
+
+			$(".three").mouseout(function () {
+				$(".wakatobi").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".four").mouseover(function () {
+				$(".cinta_island").removeAttr('hidden');
+				$(".info_tw").append($(".cinta_island"));
+			})
+
+			$(".four").mouseout(function () {
+				$(".cinta_island").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".five").mouseover(function () {
+				$(".gwk").removeAttr('hidden');
+				$(".info_tw").append($(".gwk"));
+			})
+			$(".five").mouseout(function () {
+				$(".gwk").remove();
+			})
+		})
+
+
+		$(document).ready(function () {
+			$(".six").mouseover(function () {
+				$(".borubudur").removeAttr('hidden');
+				$(".info_tw").append($(".borubudur"));
+			})
+			$(".six").mouseout(function () {
+				$(".borubudur").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".seven").mouseover(function () {
+				$(".raja_ampat").removeAttr('hidden');
+				$(".info_tw").append($(".raja_ampat"));
+			})
+			$(".seven").mouseout(function () {
+				$(".raja_ampat").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".eight").mouseover(function () {
+				$(".labuan_bajo").removeAttr('hidden');
+				$(".info_tw").append($(".labuan_bajo"));
+			})
+			$(".eight").mouseout(function () {
+				$(".labuan_bajo").remove();
+			})
+		})
+
+
+		$(document).ready(function () {
+			$(".nine").mouseover(function () {
+				$(".mount_bromo").removeAttr('hidden');
+				$(".info_tw").append($(".mount_bromo"));
+			})
+			$(".nine").mouseout(function () {
+				$(".mount_bromo").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".ten").mouseover(function () {
+				$(".sharksteeth_beach").removeAttr('hidden');
+				$(".info_tw").append($(".sharksteeth_beach"));
+			})
+			$(".ten").mouseout(function () {
+				$(".sharksteeth_beach").remove();
+			})
+		})
+
+
+		$(document).ready(function () {
+			$(".eleven").mouseover(function () {
+				$(".mahakam_river").removeAttr('hidden');
+				$(".info_tw").append($(".mahakam_river"));
+			})
+			$(".eleven").mouseout(function () {
+				$(".mahakam_river").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".twelve").mouseover(function () {
+				$(".derawan_islands").removeAttr('hidden');
+				$(".info_tw").append($(".derawan_islands"));
+			})
+			$(".twelve").mouseout(function () {
+				$(".derawan_islands").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".thirdteen").mouseover(function () {
+				$(".sentani_lake").removeAttr('hidden');
+				$(".info_tw").append($(".sentani_lake"));
+			})
+			$(".thirdteen").mouseout(function () {
+				$(".sentani_lake").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".fourteen").mouseover(function () {
+				$(".gong_peace").removeAttr('hidden');
+				$(".info_tw").append($(".gong_peace"));
+			})
+			$(".fourteen").mouseout(function () {
+				$(".gong_peace").remove();
+			})
+		})
+
+		$(document).ready(function () {
+			$(".fiveteen").mouseover(function () {
+				$(".lake_kapuas").removeAttr('hidden');
+				$(".info_tw").append($(".lake_kapuas"));
+			})
+			$(".fiveteen").mouseout(function () {
+				$(".lake_kapuas").remove();
+			})
+		})
+
+	</script>
+</body>
+
+</html>

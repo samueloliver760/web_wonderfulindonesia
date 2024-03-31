@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>About Indonesia</title>
+	<link rel="icon" href="logo.png">
+	<meta http-equiv="refresh" content="15">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.flip.js"></script>
+
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-family: 'QuickSand';
+		}
+
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.wrapper {
+			width: 1200px;
+			margin: auto;
+			position: relative;
+			margin-bottom: 40px;
+			margin-top: 20px;
+		}
+
+		.logo img {
+			width: 80px;
+			height: 80px;
+			float: left;
+			padding: 10px
+		}
+
+		.title {
+			font-size: 30px;
+			font-weight: 800;
+			font-family: Pacifico;
+			color: navy;
+			float: left;
+			margin: 10px;
+			padding: 5px;
+		}
+
+		.menu {
+			float: right;
+			margin: 20px;
+		}
+
+		nav {
+			width: 100%;
+			margin: auto;
+			line-height: 60px;
+			position: sticky;
+			padding: 2px;
+			background-color: transparent;
+			position: fixed;
+			z-index: 1;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			font-size: 20px;
+
+		}
+
+		nav ul li {
+			float: left;
+		}
+
+		a.tbl:hover {
+			color: yellowgreen;
+			font-weight: 900x;
+			border-bottom: 4px solid red;
+		}
+
+		nav ul li a {
+			color: navy;
+			font-weight: bold;
+			padding: 10px 20px;
+			text-decoration: none;
+			margin-top: 10px;
+			width: 400px;
+		}
+
+		.active_nav {
+			background-color: rgb(255, 255, 255);
+			top: 0;
+			left: 0;
+			right: 0;
+			border-bottom: 3px solid black;
+		}
+
+
+		.cover_header img {
+			position: absolute;
+			height: 700px;
+			width: 100%;
+			background-size: cover;
+		}
+
+		.caption {
+			position: relative;
+			overflow: hidden;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			font-size: 60px;
+			font-family: Permanent Marker;
+			color: black;
+		}
+
+		.header {
+			width: 100%;
+			height: 700px;
+		}
+
+		.sample_uang {
+			display: flex;
+			flex-direction: row;
+			padding: 30px;
+			margin: 50px;
+			gap: 100px;
+
+		}
+
+
+		h1 {
+			font-family: 35px;
+			text-align: center;
+			font-weight: 800;
+			margin: 30px;
+		}
+
+		h2 {
+			text-align: center;
+			font-size: 20px;
+			width: 250px;
+			margin: 20px;
+			padding: 20px;
+
+		}
+
+		.text {
+			font-size: 20px;
+			text-align: justify;
+			padding: 20px;
+		}
+
+
+		mark {
+			background-color: transparent;
+			font-family: Permanent Marker;
+		}
+
+		.footer {
+			background-color: lightblue;
+			margin-top: 10px;
+		}
+
+		.social-link .sm {
+			display: inline-block;
+			height: 30px;
+			width: 30px;
+			margin: 0 10px 10px 0;
+		}
+
+		.social-link .sma {
+			display: inline-block;
+			height: 30px;
+			width: 40px;
+			margin: 0 10px 10px 0;
+		}
+
+		.footer-col {
+			width: 20%;
+			padding: 20px 20px;
+			margin: 50px;
+		}
+
+		.container {
+			max-width: 1170px;
+			margin: auto;
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+
+		.footer-col h3 {
+			font-size: 25px;
+			margin-bottom: 10px;
+			line-height: 30px;
+			height: 100px;
+		}
+
+		.footer-col p ul li {
+			font-size: 20px;
+		}
+
+		.copyright {
+			text-decoration: none;
+			text-align: center;
+			background-color: black;
+			color: white;
+			font-size: 20px;
+			padding: 5px;
+		}
+
+		.profile_negara {
+			height: 600px;
+			padding: 10px;
+			margin: 20px;
+
+		}
+
+		.time_zone {
+			height: 1080px;
+			margin: 10px;
+		}
+
+		.etnicts {
+			height: 1200px;
+			margin: 50px;
+		}
+
+		.etnictsa {
+			padding: 10px;
+			margin: 10px;
+		}
+
+		.culture {
+			height: 1200px;
+			margin: 50px;
+		}
+
+		.culturea {
+			padding: 10px;
+			margin: 10px;
+		}
+
+		.bendera {
+			float: left;
+			width: 300px;
+			height: 200px;
+			border: 2px solid black;
+			margin: 120px 45px;
+		}
+
+		.biodata {
+			float: right;
+			width: 700px;
+			font-size: 28px;
+			text-align: justify;
+			padding: 10px;
+			margin: 10px;
+		}
+
+		.waktu {
+			width: 1100px;
+			font-size: 30px;
+			text-align: center;
+			margin: 30px;
+			padding: 10px;
+		}
+
+		.uang {
+			width: 1000px;
+			font-size: 25px;
+			text-align: justify;
+			padding: 20px;
+		}
+
+		.cultruee {
+			width: 1000px;
+			font-size: 30px;
+			text-align: center;
+			padding: 5px;
+		}
+
+		.tradhouse {
+			width: 1000px;
+			font-size: 30px;
+			text-align: left;
+			font-weight: bold;
+			margin: 25px;
+		}
+
+		.cultur {
+			width: 1100px;
+			font-size: 25px;
+			text-align: center;
+			padding: 10px;
+		}
+
+		ol {
+			padding: 30px;
+			margin: 50px;
+			font-size: 30px;
+			list-style-type: none;
+		}
+
+
+		.jam-col {
+			width: 20%;
+			border: 2px solid black;
+			height: 110px;
+			padding: 20px 30px;
+			margin: 40px;
+			text-align: center;
+		}
+
+		.uang-col {
+			width: 50%;
+			padding: 5px 5px;
+			text-align: center;
+			font-size: 30px;
+		}
+
+
+		.jam-col h3 {
+			font-size: 30px;
+			margin-bottom: 10px;
+			line-height: 30px;
+			height: 50px;
+		}
+
+		#textwib,
+		#textwita,
+		#textwit {
+			font-size: 30px;
+			margin-bottom: 60px;
+			line-height: 30px;
+			height: 70px;
+		}
+
+		.tulisan_time ol {
+			font-size: 30px;
+			padding: 30px;
+			margin: 30px;
+
+		}
+
+		.tulisan_currency {
+			font-size: 30px;
+			padding: 20px;
+			margin: 20px;
+		}
+
+
+		.tulisan_budaya {
+			font-size: 40px;
+			padding: 20px;
+			margin: 20px;
+			text-align: center;
+
+		}
+
+		.uangdepan {
+			width: 500px;
+			height: 250px;
+		}
+
+		.uangbelakang {
+			width: 500px;
+			height: 250px;
+		}
+
+		.koindepan {
+			width: 250px;
+			height: 250px;
+		}
+
+		.koinbelakang {
+			width: 250px;
+			height: 250px;
+		}
+
+		.sample_uang {
+			padding: 20px;
+			width: 1000px;
+			justify-content: center;
+		}
+
+		.exchanger {
+			width: 1000px;
+			padding: 20px;
+			text-align: center;
+			font-size: 20px;
+		}
+
+		#currency {
+			width: 300px;
+			height: 50px;
+			margin-top: 30px;
+			font-size: 20px;
+			padding: 5px;
+		}
+
+		.text {
+			font-size: 20px;
+		}
+
+		.hasil {
+			border: 2px solid black;
+			margin-top: 30px;
+			width: 100%;
+			height: 300px;
+		}
+
+		.info_provinsi {
+			padding: 10px;
+			width: 1100px;
+			height: 600px;
+			margin: 40px;
+			border: 2px solid black;
+			text-align: left;
+			font-size: 30px;
+
+		}
+
+		.ig_moment {
+			--gap: 16px;
+			--num-cols: 4;
+			--row-height: 260px;
+
+			box-sizing: border-box;
+			padding: var(--gap);
+			display: grid;
+			grid-template-columns: repeat(var(--num-cols), 1fr);
+			grid-auto-rows: var(--row-height);
+			gap: var(--gap);
+		}
+
+		.ig_moment>img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.ig_moment-col-2 {
+			grid-column: span 2;
+		}
+
+		.ig_moment-row-2 {
+			grid-row: span 2;
+		}
+
+		.bagian_uang {
+			height: 1000px;
+		}
+
+		.papua {
+			text-align: center;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		.maluku {
+			text-align: center;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		.kalimantan {
+			text-align: center;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		.sulawesi {
+			text-align: center;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		.sumatera {
+			text-align: center;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		.jawa {
+			text-align: center;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		.nttntb {
+			text-align: center;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		.bali {
+			text-align: center;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		.papua h2 {
+			font-size: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 10px;
+			width: 100px;
+		}
+
+		.maluku h2 {
+			font-size: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 10px;
+			width: 100px;
+		}
+
+		.kalimantan h2 {
+			font-size: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 10px;
+			width: 100px;
+		}
+
+		.sulawesi h2 {
+			font-size: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 10px;
+			width: 100px;
+		}
+
+		.sumatera h2 {
+			font-size: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 10px;
+			width: 100px;
+		}
+
+		.jawa h2 {
+			font-size: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 10px;
+			width: 100px;
+		}
+
+		.nttntb h2 {
+			font-size: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 10px;
+			width: 200px;
+		}
+
+
+		.bali h2 {
+			font-size: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 10px;
+			width: 100px;
+		}
+
+		.peta {
+			width: 1100px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<nav>
+			<div class="wrapper">
+				<div class="logo"><img src="logo.png"></div>
+				<div class="title">Visit Indonesia</div>
+				<div class="menu">
+					<ul>
+						<li><a href="Visit Indonesia - Home Page.html" class="tbl">Home</a></li>
+						<li><a href="Visit Indonesia - Indonesia.html" class="tbl">About Indonesia</a></li>
+						<li><a href="Visit Indonesia - Tempat Wisata.html" class="tbl">Tourism
+								Destination</a></li>
+						<li><a href="Visit Indonesia - Login.php" class="tbl">Apply E-visa</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+
+		<div class="cover_header">
+			<img src="cover.jpg" />
+		</div>
+
+		<div class="caption"><mark class="ubah_warna">All about</mark><mark class="ubah_warnatwo"> Indonesia</mark>
+		</div>
+	</div>
+
+	<div class="profile">
+		<div class="wrapper">
+			<h1>Profile</h1>
+			<div class="profile_negara">
+				<img class="bendera" src="flag.png">
+				<div class="tulisan_profil">
+					<p class="biodata">Indonesia or the official name is Republic of Indonesia is a country
+						located in Asia, specifically in South East Asia. Indonesia's capital city is
+						Jakarta.
+						With the population of 274,8 million peoples, Indonesia is the 4<sup>th</sup>
+						largest
+						population countries in the world behind China, United States and Russia. Indonesia
+						has
+						over 17.000 island that's why Indonesia has the nickname "The maritim countries".
+						The
+						official language in Indonesia is Indonesian. Furthermore, the majority of
+						Indonesian
+						people is Muslim (86,7 % of Indonesian population). Indonesia is lead by President
+						named Joko Widodo who already became the president since 2014 (Win the president
+						election twice 2014 and 2019) and helped by vice president named Ma'ruf Amin.
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="time">
+		<div class="wrapper">
+			<h1>Time Zone</h1>
+			<div class="time_zone">
+				<div class="tulisan_time">
+					<p class="waktu">Indonesia has 3 time zones which is divided like following:</p>
+					<ol>
+						<li><b>WIB (Western Indonesian Time)</b></li>
+						<p>WIB is used by Western part of Indonesia such as all of Sumatra and Java Islands,
+							West and Central Kalimantan. This time zone is 7 hours slower from GMT.</p>
+						<br>
+						<li><b>WITA (Central Indonesian Time)</b></li>
+						<p>WITA is used by Central part of Indonesia such as South, East and North
+							Kalimantan,
+							all of Sulawesi and Bali island, East and West Nusa Tenggara. This times zone
+							is one hour
+							slower than WIB and 8 hours slower from GMT.</p>
+						<br>
+						<lI><b>WIT (East Indonesian Time)</b></lI>
+						<p>WIT is used by Eastern part of Indonesia such as Maluku and Papua. This times
+							zone is two hour
+							slower than WIB, one hour slower than WITA and 9 hour slower than GMT
+						</p>
+					</ol>
+
+					<p class="waktu">Time Differences</p>
+					<div class="containera">
+						<div class="row">
+							<div class="jam-col">
+								<h3>WIB</h3>
+								<p id="textwib"></p>
+							</div>
+
+							<div class="jam-col">
+								<h3>WITA</h3>
+								<p id="textwita"></p>
+							</div>
+
+							<div class="jam-col">
+								<h3>WIT</h3>
+								<p id="textwit"></p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="rupiah">
+			<div class="wrapper">
+				<h1>Currency</h1>
+				<div class="bagian_uang">
+					<div class="tulisan_currency">
+						<p class="uang">The currency of Indonesia is Rupiah. The currency code is IDR with
+							the symbol is Rp.
+							Rupiah is widely used by local and accepted almost all shop, hotel and
+							restaurants across the nation.
+							Indonesian money has 2 types which are banknotes and coin. The backnotes
+							nominal are from 1000 , 2000,
+							5000, 10000, 20000, 50000 to 100000 rupiah while the coin nominal are from 50,
+							100, 200, 500 to 1000 rupiah.
+							Indonesia banknotes is decorated with nation heroes such as former president
+							and vice president, Soekarno and
+							Moh Hatta, Sam Ratulangi, Juanda and etc. <br /><br />Below is the example of
+							banknotes of 100 thousand rupiah and coin of
+							500 rupiah.</p>
+					</div>
+					<div class="sample_uang">
+						<div class="flip_uang">
+							<div class="front">
+								<img class="uangdepan" src="Indonesia_2016_100000IDR.jpg">
+							</div>
+
+							<div class="back">
+								<img class="uangbelakang" src="Indonesia_2016_100000r_r.jpg">
+							</div>
+						</div>
+
+						<div class="flip_uang">
+							<div class="front">
+								<img class="koindepan" src="depankoin.jpg">
+							</div>
+
+							<div class="back">
+								<img class="koinbelakang" src="belakangkoin.jpg">
+							</div>
+						</div>
+					</div>
+
+					<div class="tulisan_currency">
+						<p class="uang">To exchange the money from your local money to rupiah, you can
+							exchange it on money exchanger (Avaiable in airport or location near you.
+							However,
+							if you go to remote area, you need to exchange it first before you go there.
+						</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="wilaysh">
+				<div class="wrapper">
+					<h1>Province in Indonesia</h1>
+					<div class="tulisan_currency">
+						<p class="uang">Currently, Indonesia has 37 provinces (formerly 34 provinces) after
+							added
+							3 new provinces: Central Papua, Highland Papua and South Papua on
+							25<sup>th</sup> July 2022.<br>
+							<br>Hover the map using your mouse to know about the provinces and it's
+							capital city !
+						</p>
+
+					</div>
+					<div class="bagian_provinsi">
+						<img src="petaindo.png" usemap="#imagemap">
+
+						<map name="imagemap">
+							<area id="papua" shape="poly" alt="Papua" coords="1105,222,1098,222,1098,319,1084,216,1076,216,
+					1053,206,1032,197,1029,195,1012,204,1015,211,1008,211,999,215,997,212,993,214,992,221,984,225,983,232,973,240,
+					961,239,956,234,959,230,954,232,953,219,949,219,949,229,941,217,939,199,943,190,938,183,940,179,937,178,921,178,
+					906,169,894,171,887,177,874,178,872,188,867,189,867,182,862,181,863,181,863,178,853,179,853,183,858,184,861,190,
+					865,194,888,199,888,203,897,214,930,212,936,210,933,221,922,220,917,218,908,228,902,224,893,224,891,226,890,231,
+					897,230,906,238,909,239,912,244,908,247,912,257,920,256,933,230,935,235,930,237,931,247,952,253,960,253,955,256,
+					954,259,966,266,984,268,1007,277,1015,278,1035,290,1044,311,1056,323,1047,324,1052,330,1050,333,1056,341,1050,335,
+					1034,341,1025,359,1055,361,1062,352,1081,354,1103,378,1105,324,1100,320,1105,310" />
+
+							<area id="sumatera" shape="poly" alt="Sumatera" coords="11,28,11,34,41,72,49,71,62,90,68,93,69,104,78,108,92,117,97,121,
+					95,125,105,155,120,162,120,168,145,212,180,250,180,255,218,281,234,302,237,298,233,293,237,291,248,297,251,289,261,
+					298,266,265,263,261,267,251,263,247,270,237,269,231,263,228,263,223,259,222,259,261,241,215,240,208,233,205,230,184,
+					219,184,205,177,204,166,215,161,214,151,205,146,186,157,184,154,198,148,194,143,184,142,176,134,176,128,165,121,158,
+					119,155,112,147,105,144,106,147,117,129,96,114,83,94,71,82,61,84,53,76,52,75,44,66,35,58,37,49,34,32,34,20,37" />
+
+							<area id="kalimantan" shape="poly" alt="Kalimantan" coords="474,261,504,245,511,234,516,223,521,212,517,208,517,202,513,203,
+					531,188,538,179,546,178,546,169,542,168,550,140,574,141,578,134,549,113,557,104,545,86,538,85,541,77,533,74,550,73,540,
+					62,537,57,503,59,498,67,496,88,488,90,486,98,479,108,477,117,471,126,458,127,452,133,433,128,436,124,417,126,415,135,385,135,
+					376,141,352,114,348,115,344,123,337,142,339,156,347,160,343,169,349,175,366,194,369,233,379,229,379,235,387,235,398,229,402,234,
+					405,227,408,246,417,239,425,243,435,236,437,230,446,237,451,236,451,244,462,240,474,246" />
+
+							<area shape="poly" id="sulawesi" alt="Sulawesi" coords="725,127,723,132,718,138,715,140,710,151,680,153,676,150,623,150,619,148,613,148,
+					606,157,603,168,605,178,609,183,614,183,618,193,630,194,642,180,643,184,654,183,655,178,667,179,674,178,669,178,681,174,685,179,682,187,
+					677,182,670,184,656,198,646,201,643,207,634,202,642,212,644,212,658,231,662,237,658,238,655,246,665,254,667,260,671,257,671,265,653,268,653,
+					276,638,271,640,262,642,256,624,244,629,237,628,224,621,223,608,232,613,237,612,269,612,276,610,276,609,284,614,293,611,291,599,295,595,295,
+					588,293,588,288,595,256,590,249,592,243,586,243,577,244,574,234,576,228,573,227,575,223,582,219,584,207,588,207,587,188,596,177,599,182,597,171,
+					599,162,601,150,604,148,604,143,617,141,622,136,623,129,637,131,640,136,666,138,671,141,675,138,696,141,707,136,708,132,713,133,712,129,718,126,
+					723,120,726,122,728,126" />
+
+							<area shape="poly" id="bali" alt="Bali"
+								coords="500,360,488,352,482,355,475,353,471,354,474,359,480,360,488,367,483,371,489,377,492,370,494,363" />
+
+							<area shape="poly" id="nttntb" alt="NTTNTB"
+								coords="509,361,510,368,505,369,517,373,534,377,537,374,540,376,547,374,554,372,560,370,565,365,565,369,568,372,
+					574,367,584,367,580,365,579,359,566,356,563,360,559,357,557,353,549,354,561,364,550,367,543,360,540,362,536,358,528,364,524,358,517,355" />
+
+							<area shape="poly" id="maluku" alt="Maluku"
+								coords="808,90,775,103,764,129,754,181,709,185,701,214,736,255,880,262,866,214,852,192,838,144,826,108" />
+
+							<area id="jawa" shape="poly" alt="Java" coords="250,322,254,320,256,322,259,318,260,314,264,314,266,305,269,300,271,303,286,306,293,306,293,301,300,302,307,309,
+					311,310,313,307,319,312,322,309,329,315,330,322,371,325,376,326,382,314,389,314,391,320,404,321,411,322,414,325,426,325,427,333,431,334,430,338,443,347,446,345,
+					467,345,471,348,468,362,474,367,469,369,468,365,459,365,443,357,436,357,429,360,381,355,351,345,328,343,327,346,308,342,301,338,281,338,278,334,282,330,280,326,
+					275,327,270,323" />
+						</map>
+
+						<div class="info_provinsi">
+							<p class="provinsi"></p>
+						</div>
+
+						<div class="papua" hidden>
+							<h2>Papua</h2>
+							<ol>
+								<li>Central Papua (Capital city: Nabire)</li>
+								<li>Highland Papua (Capital city: Wamena)</li>
+								<li>Papua (Capital city: Jayapura)</li>
+								<li>South Papua (Capital city: Merauke)</li>
+								<li>West Papua (Capital city: Manokwari)</li>
+							</ol>
+						</div>
+
+						<div class="sumatera" hidden>
+							<h2>Sumatera</h2>
+							<ol>
+								<li>Aceh (Capital city: Banda Aceh)</li>
+								<li>Bangka Belitung Islands (Capital city: Pangkalpinang)</li>
+								<li>Bengkulu (Capital city: Bengkulu)</li>
+								<li>Jambi (Capital city: Jambi)</li>
+								<li>Lampung (Capital city: Bandar Lampung)</li>
+								<li>North Sumatera (Capital city: Medan)</li>
+								<li>Riau (Capital city: Pekanbaru)</li>
+								<li>Riau Islands (Capital city: Tanjungpinang)</li>
+								<li>South Sumatera (Capital city: Lampung)</li>
+								<li>West Sumatera (Capital city: Padang)</li>
+							</ol>
+						</div>
+
+						<div class="jawa" hidden>
+							<h2>Java</h2>
+							<ol>
+								<li>Banten (Capital city: Serang)</li>
+								<li>Central Java (Capital city: Semarang)</li>
+								<li>East Java (Capital city: Surabaya)</li>
+								<li>Jakarta (Capital city of Indonesia)</li>
+								<li>West Java (Capital city: Bandung)</li>
+								<li>Yogyakarta (Capital city: Yogyakarta)</li>
+							</ol>
+						</div>
+
+						<div class="kalimantan" hidden>
+							<h2>Kalimantan</h2>
+							<ol>
+								<li>Central Kalimantan (Capital city: Palangkaraya)</li>
+								<li>East Kalimantan (Capital city: Samarinda)</li>
+								<li>North Kalimantan (Capital city: Tanjung Selor)</li>
+								<li>South Kalimantan (Capital city: Banjarbaru)</li>
+								<li>West Kalimantan (Capital city: Pontianak)</li>
+							</ol>
+						</div>
+
+						<div class="sulawesi" hidden>
+							<h2>Sulawesi</h2>
+							<ol>
+								<li>Central Sulawesi (Capital city: Palu)</li>
+								<li>North Sulawesi (Capital city: Manado)</li>
+								<li>Southeast Sulawesi (Capital city: Kendari)</li>
+								<li>South Sulawesi (Capital city: Makassar)</li>
+								<li>West Sulawesi (Capital city: Mamuju)</li>
+							</ol>
+						</div>
+
+						<div class="maluku" hidden>
+							<h2>Maluku</h2>
+							<ol>
+								<li>Maluku (Capital city: Ambon)</li>
+								<li>North Maluku (Capital city: Sofifi)</li>
+							</ol>
+						</div>
+
+						<div class="bali" hidden>
+							<h2>Bali</h2>
+							<ol>
+								<li>Bali (Capital city: Denpasar)</li>
+							</ol>
+						</div>
+
+						<div class="nttntb" hidden>
+							<h2>NTT and NTB</h2>
+							<ol>
+								<li>West Nusa Tenggara (Capital city: Mataram)</li>
+								<li>East Nusa Tenggara (Capital city: Kupang </li>
+							</ol>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="etnicts">
+				<div class="wrapper">
+					<h1>Ethnics</h1>
+					<div class="etnictsa">
+						<div class="tulisan_time">
+							<div class="tulisan_currency">
+								<p class="uang">Indonesia has up to 17.000 etnicts across the nation.
+									They speak their own local language,
+									has different customs and etc. But despite that, all the etnicts
+									are united as one nation like in the one of
+									the verse 3 of Pancasila which is Indonesia unity !</p>
+							</div>
+						</div>
+
+						<div class="ig_moment">
+							<img src="suku1.jpg">
+							<img src="suku2.jpg">
+							<img src="suku3.JPG">
+							<img src="suku4.JPG">
+							<img src="suku5.jpg">
+							<img src="suku6.jpg">
+							<img src="suku7.jpg">
+							<img src="suku8.jpg">
+							<img src="suku9.jpeg">
+							<img src="suku10.jpg">
+							<img src="suku11.jpg">
+							<img src="suku12.jpg">
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<footer>
+				<div class="footer">
+					<div class="container">
+						<div class="row">
+							<div class="footer-col">
+								<h3>Ministry of Tourism and Creative Economy</h3>
+								<p>Jalan Medan Merdeka Barat No 17, RT/RW 02/03, Gambir, Central Jakarta
+									City, Jakarta 10110</p>
+							</div>
+
+							<div class="footer-col">
+								<h3>Services on this Website</h3>
+								<ul>
+									<li>Terms of Service</li>
+									<li>FAQ</li>
+									<li>Privacy Policy</li>
+								</ul>
+							</div>
+
+							<div class="footer-col">
+								<h3>Follow us on this social media !</h3>
+								<div class="social-link">
+									<a href="https://www.instagram.com/pesona.indonesia/"><img
+											class="sm"
+											src="https://icon-library.com/images/instagram-small-icon/instagram-small-icon-12.jpg" /></a>
+									<a href="https://twitter.com/pesonaindonesia"><img img class="sm"
+											src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+									<a href="https://www.youtube.com/c/PesonaIndonesiaofficial"><img
+											img class="sma"
+											src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
+											</a>
+										<a href="https://www.facebook.com/pesona.indonesia"><img img
+												class="sm"
+												src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"></a>
+										<a href="https://www.tiktok.com/@pesonaindonesia"><img img
+												class="sm"
+												src="https://pnggrid.com/wp-content/uploads/2021/04/TikTok-Logo-1363x1536.png"></a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+			</footer>
+			<div class="copyright">
+				<div class="wrapper"> <span> &copy;
+						<script>document.write(new Date().getFullYear())
+						</script> | Visit Indonesia. All Rights Reserved.
+					</span> </div>
+			</div>
+			<script>
+
+				function calcTime(city, offset) {
+					var today = new Date();
+					var utc = today.getTime() + (today.getTimezoneOffset() * 60000);
+					var timewita = new Date(utc + (3600000 * offset));
+					var timewit = new Date(utc + (3600000 * offset));
+
+					return timewita.toLocaleString().toLocaleString(), timewit.toLocaleString();
+				}
+
+				document.getElementById('textwib').append(calcTime("Jakarta", "+7.0"));
+				document.getElementById('textwita').append(calcTime("Singapore", "+8.0"));
+				document.getElementById('textwit').append(calcTime("Tokyo", "+9.0"));
+
+				//Kalau discroll, navigator akan berubah warna//
+				const nav = document.querySelector('nav');
+
+				window.addEventListener('scroll', () => {
+					if (window.scrollY >= 10) {
+						nav.classList.add('active_nav');
+					}
+
+					else {
+						nav.classList.remove('active_nav');
+					}
+
+				})
+
+				//Card
+				$(document).ready(function () {
+
+					$(".flip_uang").flip({
+						axis: 'y',
+						trigger: 'hover'
+					});
+
+
+				})
+
+
+				$(document).ready(function () {
+					$(".caption").mouseover(function () {
+						$(".ubah_warna").css({ "color": "red" });
+						$(".ubah_warnatwo").css({ "color": "whitesmoke" });
+					})
+
+					$(".caption").mouseout(function () {
+						$(".ubah_warna").css({ "color": "black" });
+						$(".ubah_warnatwo").css({ "color": "black" });
+					})
+				})
+
+
+				$(document).ready(function () {
+					$("#papua").mouseover(function () {
+						$(".papua").removeAttr('hidden');
+						$(".info_provinsi").append($(".papua"));
+					})
+
+					$("#papua").mouseout(function () {
+						$(".papua").remove();
+					})
+				})
+
+				$(document).ready(function () {
+					$("#sumatera").mouseover(function () {
+						$(".sumatera").removeAttr('hidden');
+						$(".info_provinsi").append($(".sumatera"));
+					})
+
+					$("#sumatera").mouseout(function () {
+						$(".sumatera").remove();
+					})
+				})
+
+				$(document).ready(function () {
+					$("#jawa").mouseover(function () {
+						$(".jawa").removeAttr('hidden');
+						$(".info_provinsi").append($(".jawa"));
+					})
+
+					$("#jawa").mouseout(function () {
+						$(".jawa").remove();
+					})
+				})
+
+				$(document).ready(function () {
+					$("#kalimantan").mouseover(function () {
+						$(".kalimantan").removeAttr('hidden');
+						$(".info_provinsi").append($(".kalimantan"));
+					})
+
+					$("#kalimantan").mouseout(function () {
+						$(".kalimantan").remove();
+					})
+				})
+
+				$(document).ready(function () {
+					$("#sulawesi").mouseover(function () {
+						$(".sulawesi").removeAttr('hidden');
+						$(".info_provinsi").append($(".sulawesi"));
+					})
+
+					$("#sulawesi").mouseout(function () {
+						$(".sulawesi").remove();
+					})
+				})
+
+				$(document).ready(function () {
+					$("#maluku").mouseover(function () {
+						$(".maluku").removeAttr('hidden');
+						$(".info_provinsi").append($(".maluku"));
+					})
+
+					$("#maluku").mouseout(function () {
+						$(".maluku").remove();
+					})
+				})
+
+				$(document).ready(function () {
+					$("#bali").mouseover(function () {
+						$(".bali").removeAttr('hidden');
+						$(".info_provinsi").append($(".bali"));
+					})
+
+					$("#bali").mouseout(function () {
+						$(".bali").remove();
+					})
+				})
+
+				$(document).ready(function () {
+					$("#nttntb").mouseover(function () {
+						$(".nttntb").removeAttr('hidden');
+						$(".info_provinsi").append($(".nttntb"));
+					})
+
+					$("#nttntb").mouseout(function () {
+						$(".nttntb").remove();
+					})
+				})
+
+			</script>
+</body>
+
+</html>
